@@ -2,141 +2,50 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Sparkle Vision</title>
+	<title>ЗАВОД</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 	<link rel='stylesheet' href='/index.css'>
+	<link rel="icon" href="./down.jpg/favicon.ico" type="./down.jpg/x-icon">
 </head>
 
-<body>
-	<h1>Видео с веб-камеры</h1>
-	<video id="videoElement" width="640" height="480" autoplay></video>
-	<button id="startButton">Старт
-
-	</button>
-
-	<script>
-		const videoElement = document.getElementById('videoElement')
-		const startButton = document.getElementById('startButton')
-
-		// Функция для запуска видео с веб-камеры
-		async function startVideo() {
-			try {
-
-				const stream = await navigator.mediaDevices.getUserMedia({ video: true })
-				videoElement.srcObject = stream
-			} catch (err) {
-				console.error('Ошибка при получении доступа к веб-камере:', err)
-			}
-		}
-
-		startButton.addEventListener('click', startVideo);
-	</script>
-
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6">
-				<div class="video-placeholder">
-					VIDEO
+<body class='page'>
+	<header></header>
+	<main class='main'>
+		<div class='container'>
+			</divclass>
+			<div class="container__side">
+				<div class="container__videoplay col-md-6">
+					<video id="videoElement" width="640" height="480" autoplay class="video__placeholder"></video>
 				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="video-placeholder">
-					VIDEO
-				</div>
-			</div>
-
-			<div class="">
-				<div class="col-md-8">
-					<div class="btn-group" role="group" aria-label="Basic example">
-						<button type="button" class="btn btn-secondary">Cтарт </button>
-						<button type="button" class="btn btn-secondary">Стоп</button>
-						<button type="button" class="btn btn-secondary">Показать график</button>
-						<button type="button" class="btn btn-secondary">Настройки</button>
+				<div class="">
+					<div class="col-md-8">
+						<div class="btn-group" role="group" aria-label="Basic example">
+							<button id="startButton" type="button" class="btn btn-secondary">Включить </button>
+							<button id='stopButton' type="button" class="btn btn-secondary">Отключить</button>
+							<button type="button" class="btn btn-secondary">Показать график</button>
+							<button type="button" class="btn btn-secondary">Настройки</button>
+						</div>
 					</div>
 				</div>
-
 			</div>
 
 
-			<div class="row">
-				<div class="col-md-12">
-					<div class="table-responsive">
-						<table class="table">
-							<thead>
-								<tr>
-									<th scope="col">Size</th>
-									<th scope="col">Value</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>bla</td>
-									<td>0</td>
-								</tr>
-								<tr>
-									<td>bla</td>
-									<td>0</td>
-								</tr>
-								<tr>
-									<td>bla</td>
-									<td>0</td>
-								</tr>
-								<tr>
-									<td>bla</td>
-									<td>0</td>
-								</tr>
-								<tr>
-									<td>bla</td>
-									<td>0</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
+			<section class="photo-grid">
+				<div class="photo-grid__items">
+					<img class="photo-grid__item" src="./down.jpg" alt="Летяга Рыбаков" />
+					<img class="photo-grid__item" src="./down.jpg" alt="Летяга Рыбаков" />
+					<img class="photo-grid__item" src="./down.jpg" alt="Летяга Рыбаков" />
+					<img class="photo-grid__item" src="./down.jpg" alt="Летяга Рыбаков" />
+					<img class="photo-grid__item" src="./up.jpg" alt="Летяга Рыбаков" />
+					<img class="photo-grid__item" src="./up.jpg" alt="Летяга Рыбаков" />
+					<img class="photo-grid__item" src="./up.jpg" alt="Летяга Рыбаков" />
+					<img class="photo-grid__item" src="./up.jpg" alt="Летяга Рыбаков" />
 				</div>
-				<div class="col-md-4">
-					<button type="button" class="btn btn-primary">Button</button>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-4">
-				<div class="card-placeholder">
-					CARD 1
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="card-placeholder">
-					CARD 2
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="card-placeholder">
-					CARD 3
-				</div>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-4">
-				<div class="card-placeholder">
-					CARD 4
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="card-placeholder">
-					CARD 5
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="card-placeholder">
-					CARD 6
-				</div>
-			</div>
-		</div>
-	</div>
-
+			</section>
+	</main>
 </body>
+<script src='/index.js'></script>
 
 </html>
