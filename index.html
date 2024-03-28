@@ -14,36 +14,67 @@
 	<header></header>
 	<main class='main'>
 		<div class='container'>
-			</divclass>
 			<div class="container__side">
 				<div class="container__videoplay col-md-6">
 					<video id="videoElement" width="640" height="480" autoplay class="video__placeholder"></video>
 				</div>
 				<div class="">
 					<div class="col-md-8">
-						<div class="btn-group" role="group" aria-label="Basic example">
-							<button id="startButton" type="button" class="btn btn-secondary">Включить </button>
-							<button id='stopButton' type="button" class="btn btn-secondary">Отключить</button>
-							<button type="button" class="btn btn-secondary">Показать график</button>
-							<button type="button" class="btn btn-secondary">Настройки</button>
+						<div class="container__group" role="group" aria-label="Basic example">
+							<button id="cameraToggleBtn" class="container__group-button"> <span id='icon'
+									class="camera__icon-off"></span></button>
+							<button type="button" class="container__group-button">Показать график</button>
+							<button type="button" class="container__group-button"><span class="settings__icon"></span></button>
 						</div>
 					</div>
 				</div>
 			</div>
-
-
-			<section class="photo-grid">
-				<div class="photo-grid__items">
-					<img class="photo-grid__item" src="./down.jpg" alt="Летяга Рыбаков" />
-					<img class="photo-grid__item" src="./down.jpg" alt="Летяга Рыбаков" />
-					<img class="photo-grid__item" src="./down.jpg" alt="Летяга Рыбаков" />
-					<img class="photo-grid__item" src="./down.jpg" alt="Летяга Рыбаков" />
-					<img class="photo-grid__item" src="./up.jpg" alt="Летяга Рыбаков" />
-					<img class="photo-grid__item" src="./up.jpg" alt="Летяга Рыбаков" />
-					<img class="photo-grid__item" src="./up.jpg" alt="Летяга Рыбаков" />
-					<img class="photo-grid__item" src="./up.jpg" alt="Летяга Рыбаков" />
+			<div class='container__list'>
+				<div class="container__table">
+					<table class="container__table-list">
+						<tbody>
+							<tr class='container__table-element'>
+								<td class='container__table-size'>Верхняя граница трубы(красная)</td>
+								<td class='container__table-value'>8 </td>
+							</tr>
+							<tr class='container__table-element'>
+								<td class='container__table-size'>Нижняя граница трубы(красная)</td>
+								<td class='container__table-value'>32</td>
+							</tr>
+							<tr class='container__table-element'>
+								<td class='container__table-size'>Расстояние от средней линии до пилотной</td>
+								<td class='container__table-value'>16 </td>
+							</tr>
+							<tr class='container__table-element'>
+								<td class='container__table-size'>Средняя линяя(синяя)</td>
+								<td class='container__table-value'>33</td>
+							</tr>
+							<tr class='container__table-element'>
+								<td class='container__table-size'>Пилотная линия(розовая)</td>
+								<td class='container__table-value'>34</td>
+								</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
-			</section>
+				<button class='container__table-buttontoggle' id="themeToggleBtn">Сменить тему</button>
+			</div>
+		</div>
+
+
+		<section class="photo-grid">
+			<div class="photo-grid__items">
+				<img class="photo-grid__item" src="./image/Picture Give up.jpeg" alt="Летяга Рыбаков" />
+				<img class="photo-grid__item" src="./image/Picture Give up.jpeg" alt="Летяга Рыбаков" />
+				<img class="photo-grid__item" src="./image/Picture Give up.jpeg" alt="Летяга Рыбаков" />
+				<img class="photo-grid__item" src="./image/Picture Give up.jpeg" alt="Летяга Рыбаков" />
+				<img class="photo-grid__item" src="./image/Picture Give up.jpeg" alt="Летяга Рыбаков" />
+				<img class="photo-grid__item" src="./image/Picture Give up.jpeg" alt="Летяга Рыбаков" />
+				<img class="photo-grid__item" src="./image/Picture Give up.jpeg" alt="Летяга Рыбаков" />
+				<img class="photo-grid__item" src="./image/Picture Give up.jpeg" alt="Летяга Рыбаков" />
+
+			</div>
+		</section>
 	</main>
 </body>
 <script src='/index.js'></script>
